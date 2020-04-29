@@ -14,7 +14,7 @@
 
 #### 这个区域的获得方式的几种方法
 1.百度地图的鼠标绘制工具来获取区域内的点 ,这个点的集合就是overlays数组中对象的ia属性 . http://lbsyun.baidu.com/jsdemo.htm#f0_7
-2.百度地图的行政区获取指定省,多个省来一起判断(精准)  http://lbsyun.baidu.com/jsdemo.htm#c1_10,
+2.百度地图的行政区获取指定省,多个省来一起判断  http://lbsyun.baidu.com/jsdemo.htm#c1_10,
 3.第三方途径获取
 
 **这里要确定给定点和多边形点是同属于一个坐标系这样才才不会有误差. 如果是google的给定点最好从google获取多边形点**
