@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+        #allmap{width:100%;height:600px;}
+        p{margin-left:5px; font-size:14px;}
+    </style>
+    <!--<script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>-->
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=a6FxdjCkzoZhv9VR4Ax3KureuCw8P0xh"></script>
+    <script src="//libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="GISInChina.js"></script>
+    <script src="ChinaPointList.js"></script>
+    <title>判断是否在国内</title>
+</head>
+<body>
+<div id="allmap"></div>
+<p>点击地图,判断是否在国内</p>
+</body>
+</html>
+<script type="text/javascript">
+    // 百度地图API功能
+    map = new BMap.Map("allmap");
+    map.centerAndZoom(new BMap.Point(116.417854,39.921988), 6);
+    map.enableScrollWheelZoom();
+    map.addEventListener("click",function(e){
+        let flag =checkChina(e.point,chinaList)?"该点在中国":"该点不在中国"
+        alert(e.point.lng + "," + e.point.lat+" "+flag);
+    });
+
+
+</script>
